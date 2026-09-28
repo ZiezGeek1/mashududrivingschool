@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mashudu Driving School | Evander, Mpumalanga</title>
+<meta name="description" content="Mashudu Driving School — women-owned K53 driving lessons for Codes 8, 10 &amp; 14 in Evander, Mpumalanga. Registered with S.A.N.A.D.S. Founded 2017.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --red:#BD1D19;
+    --red-deep:#96130F;
+    --red-tint:#FBEAE9;
+    --blue:#17515E;
+    --blue-deep:#0E3840;
+    --blue-tint:#E9F0F1;
+    --ink:#221F1C;
+    --ink-soft:#5C574F;
+    --paper:#FFFFFF;
+    --surface:#F7F6F3;
+    --line:#E8E5DF;
+    --radius:2px;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Source Serif 4', Georgia, serif;
+    font-size:17px;
+    line-height:1.62;
+    -webkit-font-smoothing:antialiased;
+  }
+  img{max-width:100%; display:block;}
+  a{color:inherit;}
+  h1,h2,h3,h4{
+    font-family:'Barlow Condensed', 'Arial Narrow', sans-serif;
+    font-weight:700;
+    line-height:1.04;
+    margin:0;
+    letter-spacing:0.2px;
+  }
+  .wrap{max-width:1120px; margin:0 auto; padding:0 28px;}
+  .kicker{
+    font-family:'Barlow Condensed', sans-serif;
+    font-weight:600;
+    font-size:0.98rem;
+    letter-spacing:0.4px;
+    color:var(--red);
+    margin:0 0 10px;
+  }
+  .kicker.on-dark{color:#E8A6A2;}
+  section{padding:84px 0;}
+  @media (max-width:700px){ section{padding:52px 0;} }
+
+  /* ---------- brand colour utility (used in headings) ---------- */
+
+  /* ---------- nav ---------- */
+  header.site-nav{
+    position:sticky; top:0; z-index:50;
+    background:var(--paper);
+    border-bottom:1px solid var(--line);
+  }
+  .nav-inner{
+    max-width:1120px; margin:0 auto; padding:0 28px;
+    display:flex; align-items:center; justify-content:space-between;
+    gap:24px; height:76px;
+  }
+  .brand{text-decoration:none; flex-shrink:0; display:flex; align-items:center;}
+  .brand-logo{height:46px; width:auto; display:block;}
+  nav.links{display:flex; align-items:center; gap:26px;}
+  nav.links a{
+    font-family:'Barlow Condensed', sans-serif;
+    font-weight:600; font-size:1.02rem;
+    text-decoration:none; color:var(--ink);
+    padding:6px 2px; border-bottom:2px solid transparent;
+    transition:border-color .15s ease, color .15s ease;
+  }
+  nav.links a:hover{border-color:var(--red); color:var(--red);}
+  .nav-toggle{display:none;}
+  @media (max-width:860px){
+    nav.links{display:none;}
+    .nav-toggle{
+      display:inline-flex; align-items:center; gap:8px;
+      font-family:'Barlow Condensed', sans-serif; font-weight:600;
+      background:none; border:1px solid var(--ink); padding:9px 14px;
+      border-radius:var(--radius); cursor:pointer; font-size:1rem;
+    }
+    .nav-inner{height:68px;}
+    body.nav-open nav.links{
+      display:flex; flex-direction:column; align-items:flex-start; gap:2px;
+      position:absolute; top:68px; left:0; right:0; background:var(--paper);
+      border-bottom:1px solid var(--line); padding:10px 28px 20px;
+    }
+    body.nav-open nav.links a{width:100%; padding:10px 0;}
+  }
+
+  /* ---------- wall of students (hero) ---------- */
+  .wall{background:var(--surface);}
+  .wall-caption{
+    max-width:1120px; margin:0 auto; padding:76px 28px 48px;
+    text-align:center;
+  }
+  .wall-caption .kicker{justify-content:center;}
+  .wall-caption h1{
+    font-size:clamp(2.3rem, 4.6vw, 3.6rem);
+    max-width:18ch; margin:0 auto;
+  }
+  .wall-caption h1 .w-red{color:var(--red);}
+  .wall-caption h1 .w-blue{color:var(--blue);}
+  .wall-caption p.lede{
+    font-size:1.14rem; color:var(--ink-soft);
+    max-width:52ch; margin:20px auto 30px;
+  }
+  .hero-ctas{display:flex; gap:16px; flex-wrap:wrap; justify-content:center;}
+
+  .wall-grid{
+    display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:20px;
+    padding-bottom:76px;
+  }
+  .wall-tile{
+    background:var(--paper);
+    transition:transform .18s ease, box-shadow .18s ease;
+  }
+  .wall-tile:hover{transform:translateY(-3px); box-shadow:0 14px 28px rgba(14,56,64,0.12);}
+  .wall-photo{position:relative; aspect-ratio:3/4; min-height:150px; overflow:hidden; background:var(--blue-tint);}
+  @media (max-width:520px){ .wall-photo{min-height:120px;} }
+  .wall-photo .placeholder{
+    position:absolute; inset:0; z-index:1; display:flex; align-items:center; justify-content:center;
+    flex-direction:column; gap:6px; text-align:center; padding:8px;
+    color:var(--blue-deep);
+  }
+  .wall-photo .placeholder .mark{
+    width:26px; height:26px; border:2px dashed var(--blue); border-radius:50%;
+    display:flex; align-items:center; justify-content:center; font-size:0.85rem;
+    font-family:'Barlow Condensed', sans-serif; font-weight:700;
+  }
+  .wall-photo .placeholder span{font-family:'Barlow Condensed', sans-serif; font-size:0.78rem; line-height:1.2;}
+  .wall-photo img{width:100%; height:100%; object-fit:cover; position:absolute; inset:0; z-index:2; background:var(--blue-tint);}
+  .wall-cap{
+    padding:11px 6px; text-align:center;
+    font-family:'Barlow Condensed', sans-serif; font-weight:600; font-size:0.95rem;
+    color:var(--ink); letter-spacing:0.2px; border-top:1px solid var(--line);
+  }
+  .wall-cap.is-placeholder{color:var(--ink-soft); font-weight:500; font-style:italic; opacity:0.85;}
+  @media (max-width:860px){ .wall-grid{grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px;} }
+  @media (max-width:520px){ .wall-grid{grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px;} }
+  .btn{
+    display:inline-block; text-decoration:none;
+    font-family:'Barlow Condensed', sans-serif; font-weight:700; font-size:1.08rem;
+    padding:14px 26px; border-radius:var(--radius);
+    letter-spacing:0.2px;
+  }
+  .btn-red{background:var(--red); color:#fff;}
+  .btn-red:hover{background:var(--red-deep);}
+  .btn-outline{border:1px solid var(--ink-soft); color:var(--ink);}
+  .btn-outline:hover{border-color:var(--blue); color:var(--blue);}
+
+  /* ---------- practical training photo strip ---------- */
+  .photo-strip{background:var(--paper);}
+  .photo-strip img{width:100%; height:clamp(260px,42vw,460px); object-fit:cover;}
+  .photo-strip .cap{
+    max-width:1120px; margin:0 auto; padding:16px 28px 0;
+    font-family:'Barlow Condensed', sans-serif; color:var(--ink-soft); font-size:1rem;
+  }
+
+  /* stat row */
+  .stat-row{border-top:1px solid var(--line); border-bottom:1px solid var(--line); background:var(--paper);}
+  .stat-grid{
+    max-width:1120px; margin:0 auto; padding:0 28px;
+    display:grid; grid-template-columns:repeat(3,minmax(0,1fr));
+  }
+  .stat{padding:30px 24px; border-left:1px solid var(--line);}
+  .stat:first-child{border-left:none;}
+  .stat .num{
+    font-family:'Barlow Condensed', sans-serif; font-weight:700;
+    font-size:2.5rem; line-height:1;
+  }
+  .stat:nth-child(1) .num{color:var(--red);}
+  .stat:nth-child(2) .num{color:var(--blue);}
+  .stat:nth-child(3) .num{color:var(--red);}
+  .stat .lbl{color:var(--ink-soft); font-size:0.98rem; margin-top:6px;}
+  @media (max-width:700px){
+    .stat-grid{grid-template-columns:1fr;}
+    .stat{border-left:none; border-top:1px solid var(--line); padding:20px 24px;}
+    .stat:first-child{border-top:none;}
+  }
+
+  /* ---------- about ---------- */
+  .about{background:var(--paper);}
+  .about-grid{display:grid; grid-template-columns:minmax(0,1.05fr) minmax(0,0.95fr); gap:64px; align-items:start;}
+  .about h2{font-size:clamp(2rem,3.4vw,2.8rem); margin-bottom:18px;}
+  .about h2 .w-red{color:var(--red);}
+  .about h2 .w-blue{color:var(--blue);}
+  .about p{color:var(--ink-soft); margin:0 0 16px;}
+  .about-photos{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px;}
+  .about-photos img{width:100%; height:170px; object-fit:cover;}
+  .about-photos .full{grid-column:1/-1; height:210px;}
+  .owned-badge{
+    margin-top:28px; padding:16px 20px;
+    background:var(--red-tint); border-left:4px solid var(--red);
+    font-family:'Barlow Condensed', sans-serif; font-size:1.08rem; font-weight:600;
+    color:var(--red-deep);
+  }
+  @media (max-width:860px){ .about-grid{grid-template-columns:1fr;} }
+
+  /* ---------- vision/mission ---------- */
+  .vm{background:var(--blue-deep); color:#fff;}
+  .vm-grid{display:grid; grid-template-columns:minmax(0,1fr) 1px minmax(0,1fr); gap:48px;}
+  .vm-col h3{font-size:1.9rem; color:#fff; margin-bottom:14px;}
+  .vm-col p{color:#C9D8DA; margin:0;}
+  .vm-rule{background:rgba(255,255,255,0.18);}
+  @media (max-width:800px){
+    .vm-grid{grid-template-columns:1fr; gap:30px;}
+    .vm-rule{display:none;}
+  }
+
+  /* ---------- services / pricing ---------- */
+  .services{background:var(--surface);}
+  .services h2{font-size:clamp(2rem,3.4vw,2.8rem);}
+  .services > .wrap > p.section-lede{color:var(--ink-soft); max-width:62ch; margin:14px 0 44px;}
+
+  .method-grid{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:24px; margin-bottom:56px;}
+  .method-card{background:var(--paper); border-top:3px solid var(--blue); padding:28px;}
+  .method-card:nth-child(2){border-top-color:var(--red);}
+  .method-card h4{font-size:1.5rem; margin-bottom:10px;}
+  .method-card p{color:var(--ink-soft); margin:0;}
+  @media (max-width:800px){ .method-grid{grid-template-columns:1fr;} }
+
+  .price-grid{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:20px;}
+  .price-card{padding:30px 26px; background:var(--paper); border:1px solid var(--line);}
+  .price-card h4{font-size:1.4rem; margin-bottom:6px;}
+  .price-card .from{
+    font-family:'Barlow Condensed', sans-serif; font-weight:700;
+    font-size:2.1rem; margin:12px 0 6px; color:var(--blue);
+  }
+  .price-card:nth-child(2) .from{color:var(--red);}
+  .price-card .from span{font-size:1rem; font-weight:600; color:var(--ink-soft);}
+  .price-card p.detail{color:var(--ink-soft); font-size:0.98rem; margin:8px 0 0;}
+  @media (max-width:800px){ .price-grid{grid-template-columns:1fr;} }
+
+  .code-row{margin-top:32px; display:flex; gap:14px; flex-wrap:wrap; align-items:center;}
+  .code-pill{
+    font-family:'Barlow Condensed', sans-serif; font-weight:700; font-size:1.02rem;
+    border:2px solid var(--blue); color:var(--blue);
+    padding:8px 16px;
+  }
+  .code-pill:nth-child(2){border-color:var(--red); color:var(--red);}
+  .code-row .note{color:var(--ink-soft); font-size:0.95rem;}
+
+  /* ---------- target group ---------- */
+  .target{background:var(--paper);}
+  .target-grid{display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1.3fr); gap:56px; align-items:center;}
+  .target h2{font-size:clamp(2rem,3.4vw,2.6rem); margin-bottom:14px;}
+  .target p{color:var(--ink-soft); margin:0;}
+  .target-list{list-style:none; margin:0; padding:0; display:grid; gap:2px;}
+  .target-list li{
+    font-family:'Barlow Condensed', sans-serif; font-size:1.12rem; font-weight:500;
+    background:var(--surface); padding:15px 18px;
+    border-left:4px solid var(--blue);
+  }
+  .target-list li:nth-child(even){border-left-color:var(--red);}
+  @media (max-width:800px){ .target-grid{grid-template-columns:1fr;} }
+
+  /* ---------- projects / registration ---------- */
+  .projects{background:var(--surface);}
+  .projects-grid{display:grid; grid-template-columns:minmax(0,1.4fr) minmax(0,1fr); gap:56px; align-items:center;}
+  .projects h2{font-size:clamp(2rem,3.4vw,2.6rem); margin-bottom:14px;}
+  .projects p{color:var(--ink-soft);}
+  .badge-box{background:var(--paper); padding:22px; text-align:center;}
+  .badge-box img{width:100%; height:auto; margin-bottom:14px;}
+  .badge-box .reg{font-family:'Barlow Condensed', sans-serif; color:var(--ink-soft); font-size:0.95rem;}
+  @media (max-width:800px){ .projects-grid{grid-template-columns:1fr;} }
+
+  /* ---------- location / contact ---------- */
+  .contact{background:var(--blue-deep); color:#fff;}
+  .contact-grid{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:56px;}
+  .contact h2{font-size:clamp(2rem,3.4vw,2.6rem); margin-bottom:10px;}
+  .contact .lede{color:#C9D8DA; margin:0 0 28px; max-width:44ch;}
+  .info-row{display:flex; gap:16px; padding:14px 0; border-top:1px solid rgba(255,255,255,0.16);}
+  .info-row:last-child{border-bottom:1px solid rgba(255,255,255,0.16);}
+  .info-row .k{
+    font-family:'Barlow Condensed', sans-serif; font-weight:700; color:#E8A6A2;
+    min-width:120px; flex-shrink:0;
+  }
+  .info-row .v a{text-decoration:underline; text-decoration-color:rgba(255,255,255,0.4);}
+  .hours-table{width:100%; border-collapse:collapse; margin-top:8px;}
+  .hours-table td{padding:8px 0; border-top:1px solid rgba(255,255,255,0.16); font-size:0.98rem;}
+  .hours-table td:last-child{text-align:right; color:#C9D8DA;}
+  .hours-table tr:first-child td{border-top:none;}
+  @media (max-width:800px){ .contact-grid{grid-template-columns:1fr;} }
+
+  /* ---------- footer ---------- */
+  footer{background:var(--ink); color:#B9B4AB; padding:36px 0;}
+  .footer-grid{display:flex; justify-content:space-between; align-items:center; gap:20px; flex-wrap:wrap;}
+  .footer-logo{height:36px; width:auto; display:block;}
+  .footer-links{display:flex; flex-wrap:wrap; font-size:0.95rem;}
+  .footer-links a{text-decoration:none; margin-right:22px;}
+  .footer-links a:last-child{margin-right:0;}
+  .footer-links a:hover{color:#fff;}
+  .footer-fine{font-size:0.85rem; margin-top:20px; text-align:center; color:#726D63;}
+</style>
+</head>
+<body>
+
+<header class="site-nav">
+  <div class="nav-inner">
+    <a class="brand" href="#top">
+      <img class="brand-logo" src="assets/img/mashudu-logo-color.png" alt="Mashudu Driving School logo">
+    </a>
+    <button class="nav-toggle" onclick="document.body.classList.toggle('nav-open')">Menu</button>
+    <nav class="links">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#wall">Our students</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- WALL OF STUDENTS (hero) -->
+  <section class="wall" id="wall">
+    <div class="wall-caption">
+      <p class="kicker">Evander, Mpumalanga</p>
+      <h1><span class="w-red">300+ drivers</span> trained by <span class="w-blue">Mashudu Driving School</span></h1>
+      <p class="lede">Women-owned and led since 2017, with certified K53 instructors for Codes 8, 10 &amp; 14 — every face on this wall passed with us.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-red" href="tel:+27174220624">Call 017 422 0624</a>
+        <a class="btn btn-outline" href="#pricing">See lesson prices</a>
+      </div>
+    </div>
+    <div class="wrap">
+      <div class="wall-grid">
+        <figure class="wall-tile">
+          <div class="wall-photo"><img class="w-photo" src="assets/img/wall/learner-graduate-1.jpg" alt="Mashudu Driving School graduate holding their pass certificate" loading="lazy"><div class="placeholder"><div class="mark">✓</div><span>Photo coming soon</span></div></div>
+          <figcaption class="wall-cap">Pass day</figcaption>
+        </figure>
+        <figure class="wall-tile">
+          <div class="wall-photo"><img class="w-photo" src="assets/img/wall/learner-graduate-2.jpg" alt="Mashudu Driving School graduate holding their pass certificate" loading="lazy"><div class="placeholder"><div class="mark">✓</div><span>Photo coming soon</span></div></div>
+          <figcaption class="wall-cap">Certified driver</figcaption>
+        </figure>
+        <figure class="wall-tile">
+          <div class="wall-photo"><img class="w-photo" src="assets/img/wall/learner-graduate-3.jpg" alt="Mashudu Driving School graduate holding their pass certificate" loading="lazy"><div class="placeholder"><div class="mark">✓</div><span>Photo coming soon</span></div></div>
+          <figcaption class="wall-cap">K53 graduate</figcaption>
+        </figure>
+        <figure class="wall-tile">
+          <div class="wall-photo"><img class="w-photo" src="assets/img/wall/learner-graduate-4.jpg" alt="Mashudu Driving School graduate" loading="lazy"><div class="placeholder"><div class="mark">✓</div><span>Photo coming soon</span></div></div>
+          <figcaption class="wall-cap">Newly licensed</figcaption>
+        </figure>
+        <figure class="wall-tile">
+          <div class="wall-photo"><img class="w-photo" src="assets/img/wall/learner-graduate-5.jpg" alt="Mashudu Driving School graduate" loading="lazy"><div class="placeholder"><div class="mark">✓</div><span>Photo coming soon</span></div></div>
+          <figcaption class="wall-cap">Proud graduates</figcaption>
+        </figure>
+        <figure class="wall-tile">
+          <div class="wall-photo"><img class="w-photo" src="assets/img/wall/learner-graduate-6.jpg" alt="Mashudu Driving School graduate" loading="lazy"><div class="placeholder"><div class="mark">✓</div><span>Photo coming soon</span></div></div>
+          <figcaption class="wall-cap">Ready for the road</figcaption>
+        </figure>
+        <figure class="wall-tile">
+          <div class="wall-photo"><img class="w-photo" src="assets/img/wall/learner-graduate-7.jpg" alt="Mashudu Driving School graduate" loading="lazy"><div class="placeholder"><div class="mark">✓</div><span>Photo coming soon</span></div></div>
+          <figcaption class="wall-cap">Another pass!</figcaption>
+        </figure>
+        <figure class="wall-tile">
+          <div class="wall-photo"><img class="w-photo" src="assets/img/wall/learner-graduate-8.jpg" alt="Mashudu Driving School graduate" loading="lazy"><div class="placeholder"><div class="mark">✓</div><span>Photo coming soon</span></div></div>
+          <figcaption class="wall-cap">Test day success</figcaption>
+        </figure>
+        <figure class="wall-tile">
+          <div class="wall-photo"><img class="w-photo" src="assets/img/wall/learner-graduate-9.jpg" alt="Mashudu Driving School graduate" loading="lazy"><div class="placeholder"><div class="mark">✓</div><span>Photo coming soon</span></div></div>
+          <figcaption class="wall-cap">Confident &amp; certified</figcaption>
+        </figure>
+        <figure class="wall-tile">
+          <div class="wall-photo"><img class="w-photo" src="assets/img/wall/learner-graduate-10.jpg" alt="Mashudu Driving School graduate" loading="lazy"><div class="placeholder"><div class="mark">✓</div><span>Photo coming soon</span></div></div>
+          <figcaption class="wall-cap">Licence in hand</figcaption>
+        </figure>
+        <figure class="wall-tile">
+          <div class="wall-photo"><img class="w-photo" src="assets/img/wall/learner-graduate-11.jpg" alt="Mashudu Driving School graduate" loading="lazy"><div class="placeholder"><div class="mark">✓</div><span>Photo coming soon</span></div></div>
+          <figcaption class="wall-cap">K53 success</figcaption>
+        </figure>
+        <figure class="wall-tile">
+          <div class="wall-photo"><img class="w-photo" src="assets/img/wall/learner-graduate-12.jpg" alt="Mashudu Driving School graduate" loading="lazy"><div class="placeholder"><div class="mark">✓</div><span>Photo coming soon</span></div></div>
+          <figcaption class="wall-cap">Driving with confidence</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUCK / PRACTICAL TRAINING PHOTO -->
+  <section class="photo-strip">
+    <img src="assets/img/truck-road.jpg" alt="Mashudu Driving School training vehicle on the practical training yard">
+    <p class="cap">Practical training on our own yard and the open road — Code 8, 10 &amp; 14.</p>
+  </section>
+
+  <!-- STATS -->
+  <div class="stat-row">
+    <div class="stat-grid">
+      <div class="stat"><div class="num">2017</div><div class="lbl">Founded in Mpumalanga</div></div>
+      <div class="stat"><div class="num">300+</div><div class="lbl">Successful student graduates</div></div>
+      <div class="stat"><div class="num">8 · 10 · 14</div><div class="lbl">Codes we train for</div></div>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="wrap about-grid">
+      <div>
+        <p class="kicker">About us</p>
+        <h2>A reputable <span class="w-blue">driving academy</span>, built on 300+ graduates.</h2>
+        <p>Mashudu Driving School was founded in 2017 to provide a genuine driving course experience. We're based in Mpumalanga, operating across the Evander area, and registered with The States of African Nations Association of Driving Schools (S.A.N.A.D.S).</p>
+        <p>We offer training programmes for drivers of all ages and experience levels, so every moment you spend with us contributes to a rewarding future of driving. Our professional instructors help you feel comfortable and confident as you develop your skills on the road.</p>
+        <p>Our academy is led day-to-day by a director who is fully involved, committed and devoted to daily operations — keeping instructors current on the latest K53 techniques and holding every lesson to a consistent standard.</p>
+        <div class="owned-badge">Proudly women-owned and led</div>
+      </div>
+      <div class="about-photos">
+        <img class="full" src="assets/img/shopfront.jpg" alt="Mashudu Driving School branch entrance with road-sign decals">
+        <img src="assets/img/classroom.jpg" alt="Mashudu Driving School theory classroom">
+        <img src="assets/img/k53-classroom.jpg" alt="Students in a K53 theory lesson, socially distanced with road-sign posters on the wall">
+      </div>
+    </div>
+  </section>
+
+  <!-- VISION / MISSION -->
+  <section class="vm">
+    <div class="wrap vm-grid">
+      <div class="vm-col">
+        <p class="kicker on-dark">Our mission</p>
+        <h3>Teaching today's drivers with tomorrow's tools.</h3>
+        <p>We create an interactive driver programme loaded with e-learning, preparing learners practically and psychologically with the skills they need for the road — enhancing safe driving, reducing accident rates, and helping nervous drivers pass the first time.</p>
+      </div>
+      <div class="vm-rule"></div>
+      <div class="vm-col">
+        <p class="kicker on-dark">Our vision</p>
+        <h3>South Africa's leading driving academy.</h3>
+        <p>To become the leading driving academy in South Africa with multiple branches nationally, state-of-the-art driving simulator technology, hands-on e-learning stations and top-class instructors — awarding 10 underprivileged students driving courses every year, with our own private testing centre.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services" id="services">
+    <div class="wrap">
+      <p class="kicker">What we offer</p>
+      <h2>Theory and practical training, done properly.</h2>
+      <p class="section-lede">We place equal emphasis on the rules of the road and on a student driver's behaviour and attitude — building safety and courtesy into every lesson, in line with K53.</p>
+
+      <div class="method-grid">
+        <div class="method-card">
+          <h4>Theory classes</h4>
+          <p>Traffic rules, principles of safe driving, vehicle control, avoiding road hazards, dealing with other road users, and driving ethics — all taught in line with the K53 syllabus.</p>
+        </div>
+        <div class="method-card">
+          <h4>Practical classes</h4>
+          <p>A certified K53 instructor trains you to drive, control the vehicle and handle the road. Duration is tailored to your level and how quickly you build confidence behind the wheel.</p>
+        </div>
+      </div>
+
+      <p class="kicker" id="pricing" style="padding-top:6px;">Pricing</p>
+      <h2 style="margin-bottom:30px;">Lesson packages</h2>
+      <div class="price-grid">
+        <div class="price-card">
+          <h4>Private lessons</h4>
+          <div class="from">R250<span> from</span></div>
+          <p class="detail">1 hour per lesson. You can use your own car — for licence holders only. Applicable for Code 8 and Code 10.</p>
+        </div>
+        <div class="price-card">
+          <h4>Code 10 lessons</h4>
+          <div class="from">R2,950<span> from</span></div>
+          <p class="detail">Unlimited lessons over 3 months. Traffic fees excluded.</p>
+        </div>
+        <div class="price-card">
+          <h4>Learner's licence</h4>
+          <div class="from">R350<span> from</span></div>
+          <p class="detail">All codes, unlimited lessons over 3 weeks. Traffic fees excluded.</p>
+        </div>
+      </div>
+      <div class="code-row">
+        <span class="code-pill">Code 8</span>
+        <span class="code-pill">Code 10</span>
+        <span class="code-pill">Code 14</span>
+        <span class="note">We train and test-prepare for all three codes.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- TARGET GROUP -->
+  <section class="target">
+    <div class="wrap target-grid">
+      <div>
+        <p class="kicker">Who we train</p>
+        <h2>Everyone deserves the confidence to drive.</h2>
+        <p>From first-time learners to fleet drivers, we tailor our programme to who's in the seat.</p>
+      </div>
+      <ul class="target-list">
+        <li>All qualifying age groups and gender</li>
+        <li>Private sector</li>
+        <li>High schools &amp; FET colleges</li>
+        <li>Skills development centres</li>
+        <li>Underprivileged people</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- PROJECTS / CREDIBILITY -->
+  <section class="projects">
+    <div class="wrap projects-grid">
+      <div>
+        <p class="kicker">Community &amp; accreditation</p>
+        <h2>Giving back, and doing it by the book.</h2>
+        <p>In 2018, we taught learner's licences through to full licences for 10 orphans referred to us by government — one step toward our goal of awarding 10 underprivileged students driving courses every year.</p>
+        <p>We also give back throughout the year by running seasonal specials, making lessons more accessible to the community during key times of year.</p>
+        <p>We're registered with The States of African Nations Association of Driving Schools (S.A.N.A.D.S), and our human resource policy keeps us staffed with a careful blend of experienced instructors and youth development, all operating within the rules and regulations of the trade.</p>
+      </div>
+      <div class="badge-box">
+        <img src="assets/img/sanads-badge.jpg" alt="The States of African Nations Association of Driving Schools (S.A.N.A.D.S) badge — Obey the rules of the road">
+        <div class="reg">Registration no. 2020/259059/07</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT / LOCATION -->
+  <section class="contact" id="contact">
+    <div class="wrap contact-grid">
+      <div>
+        <p class="kicker on-dark">Get in touch</p>
+        <h2>Visit, call or message us.</h2>
+        <p class="lede">Serving the Gert Sibande District Municipality, based near Shoprite Evander and BP Evander.</p>
+
+        <div class="info-row"><div class="k">Address</div><div class="v"><a href="https://maps.google.com/?q=72+Solly+Zwane+St,+Evander,+2280" target="_blank" rel="noopener">72 Solly Zwane St, Evander, 2280</a></div></div>
+        <div class="info-row"><div class="k">Phone</div><div class="v"><a href="tel:+27174220624">017 422 0624</a> &nbsp;/&nbsp; <a href="tel:+27826095416">082 609 5416</a></div></div>
+        <div class="info-row"><div class="k">Service area</div><div class="v">Gert Sibande District Municipality, South Africa — Evander</div></div>
+        <div class="info-row"><div class="k">Social</div><div class="v"><a href="https://www.facebook.com/MashuduDrivingSchool" target="_blank" rel="noopener">Facebook</a> &nbsp;/&nbsp; <a href="https://instagram.com/mashudu_driving_school/" target="_blank" rel="noopener">Instagram</a></div></div>
+      </div>
+      <div>
+        <p class="kicker on-dark">Opening hours</p>
+        <table class="hours-table">
+          <tr><td>Monday – Friday</td><td>08:00 – 18:00</td></tr>
+          <tr><td>Saturday</td><td>09:00 – 15:30</td></tr>
+          <tr><td>Sunday</td><td>Closed</td></tr>
+        </table>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <img class="footer-logo" src="assets/img/mashudu-logo-color.png" alt="Mashudu Driving School logo">
+      <div class="footer-links">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#wall">Our students</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+    <p class="footer-fine">Mashudu Driving School · Women-owned · Reg. 2020/259059/07 · Registered with S.A.N.A.D.S · Evander, Mpumalanga</p>
+  </div>
+</footer>
+
+<script>
+  // The real photo sits above the placeholder and paints over it as soon as
+  // it loads — no class-toggle needed, so there's no "stuck on coming soon"
+  // flash even when an image loads from cache before this script runs.
+  // Only a genuinely missing/broken photo needs JS: hide it so the
+  // placeholder underneath shows through cleanly.
+  document.querySelectorAll('.w-photo').forEach(function(img){
+    img.addEventListener('error', function(){ img.style.display = 'none'; });
+  });
+</script>
+
+</body>
+</html>
