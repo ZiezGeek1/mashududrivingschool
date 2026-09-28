@@ -130,16 +130,12 @@
   .wall-photo{position:relative; aspect-ratio:3/4; min-height:150px; overflow:hidden; background:var(--blue-tint);}
   @media (max-width:520px){ .wall-photo{min-height:120px;} }
   .wall-photo .placeholder{
-    position:absolute; inset:0; z-index:1; display:flex; align-items:center; justify-content:center;
-    flex-direction:column; gap:6px; text-align:center; padding:8px;
-    color:var(--blue-deep);
+    position:absolute; inset:0; z-index:1;
+    background:linear-gradient(100deg, var(--blue-tint) 30%, #F4F8F9 50%, var(--blue-tint) 70%);
+    background-size:200% 100%; animation:wallShimmer 1.4s linear infinite;
   }
-  .wall-photo .placeholder .mark{
-    width:26px; height:26px; border:2px dashed var(--blue); border-radius:50%;
-    display:flex; align-items:center; justify-content:center; font-size:0.85rem;
-    font-family:'Barlow Condensed', sans-serif; font-weight:700;
-  }
-  .wall-photo .placeholder span{font-family:'Barlow Condensed', sans-serif; font-size:0.78rem; line-height:1.2;}
+  @keyframes wallShimmer{ from{background-position:200% 0;} to{background-position:-200% 0;} }
+  @media (prefers-reduced-motion:reduce){ .wall-photo .placeholder{animation:none;} }
   .wall-photo img{width:100%; height:100%; object-fit:cover; position:absolute; inset:0; z-index:2; background:var(--blue-tint);}
   .wall-cap{
     padding:11px 6px; text-align:center;
@@ -339,51 +335,51 @@
     <div class="wrap">
       <div class="wall-grid">
         <figure class="wall-tile">
-          <div class="wall-photo"><img class="w-photo" src="assets/img/wall/learner-graduate-1.jpg" alt="Mashudu Driving School graduate holding their pass certificate" loading="lazy"><div class="placeholder"><div class="mark">✓</div><span>Photo coming soon</span></div></div>
+          <div class="wall-photo"><img class="w-photo" src="assets/img/wall/learner-graduate-1.jpg" alt="Mashudu Driving School graduate holding their pass certificate" decoding="async"><div class="placeholder"></div></div>
           <figcaption class="wall-cap">Pass day</figcaption>
         </figure>
         <figure class="wall-tile">
-          <div class="wall-photo"><img class="w-photo" src="assets/img/wall/learner-graduate-2.jpg" alt="Mashudu Driving School graduate holding their pass certificate" loading="lazy"><div class="placeholder"><div class="mark">✓</div><span>Photo coming soon</span></div></div>
+          <div class="wall-photo"><img class="w-photo" src="assets/img/wall/learner-graduate-2.jpg" alt="Mashudu Driving School graduate holding their pass certificate" decoding="async"><div class="placeholder"></div></div>
           <figcaption class="wall-cap">Certified driver</figcaption>
         </figure>
         <figure class="wall-tile">
-          <div class="wall-photo"><img class="w-photo" src="assets/img/wall/learner-graduate-3.jpg" alt="Mashudu Driving School graduate holding their pass certificate" loading="lazy"><div class="placeholder"><div class="mark">✓</div><span>Photo coming soon</span></div></div>
+          <div class="wall-photo"><img class="w-photo" src="assets/img/wall/learner-graduate-3.jpg" alt="Mashudu Driving School graduate holding their pass certificate" decoding="async"><div class="placeholder"></div></div>
           <figcaption class="wall-cap">K53 graduate</figcaption>
         </figure>
         <figure class="wall-tile">
-          <div class="wall-photo"><img class="w-photo" src="assets/img/wall/learner-graduate-4.jpg" alt="Mashudu Driving School graduate" loading="lazy"><div class="placeholder"><div class="mark">✓</div><span>Photo coming soon</span></div></div>
+          <div class="wall-photo"><img class="w-photo" src="assets/img/wall/learner-graduate-4.jpg" alt="Mashudu Driving School graduate" decoding="async"><div class="placeholder"></div></div>
           <figcaption class="wall-cap">Newly licensed</figcaption>
         </figure>
         <figure class="wall-tile">
-          <div class="wall-photo"><img class="w-photo" src="assets/img/wall/learner-graduate-5.jpg" alt="Mashudu Driving School graduate" loading="lazy"><div class="placeholder"><div class="mark">✓</div><span>Photo coming soon</span></div></div>
+          <div class="wall-photo"><img class="w-photo" src="assets/img/wall/learner-graduate-5.jpg" alt="Mashudu Driving School graduate" decoding="async"><div class="placeholder"></div></div>
           <figcaption class="wall-cap">Proud graduates</figcaption>
         </figure>
         <figure class="wall-tile">
-          <div class="wall-photo"><img class="w-photo" src="assets/img/wall/learner-graduate-6.jpg" alt="Mashudu Driving School graduate" loading="lazy"><div class="placeholder"><div class="mark">✓</div><span>Photo coming soon</span></div></div>
+          <div class="wall-photo"><img class="w-photo" src="assets/img/wall/learner-graduate-6.jpg" alt="Mashudu Driving School graduate" decoding="async"><div class="placeholder"></div></div>
           <figcaption class="wall-cap">Ready for the road</figcaption>
         </figure>
         <figure class="wall-tile">
-          <div class="wall-photo"><img class="w-photo" src="assets/img/wall/learner-graduate-7.jpg" alt="Mashudu Driving School graduate" loading="lazy"><div class="placeholder"><div class="mark">✓</div><span>Photo coming soon</span></div></div>
+          <div class="wall-photo"><img class="w-photo" src="assets/img/wall/learner-graduate-7.jpg" alt="Mashudu Driving School graduate" decoding="async" loading="lazy"><div class="placeholder"></div></div>
           <figcaption class="wall-cap">Another pass!</figcaption>
         </figure>
         <figure class="wall-tile">
-          <div class="wall-photo"><img class="w-photo" src="assets/img/wall/learner-graduate-8.jpg" alt="Mashudu Driving School graduate" loading="lazy"><div class="placeholder"><div class="mark">✓</div><span>Photo coming soon</span></div></div>
+          <div class="wall-photo"><img class="w-photo" src="assets/img/wall/learner-graduate-8.jpg" alt="Mashudu Driving School graduate" decoding="async" loading="lazy"><div class="placeholder"></div></div>
           <figcaption class="wall-cap">Test day success</figcaption>
         </figure>
         <figure class="wall-tile">
-          <div class="wall-photo"><img class="w-photo" src="assets/img/wall/learner-graduate-9.jpg" alt="Mashudu Driving School graduate" loading="lazy"><div class="placeholder"><div class="mark">✓</div><span>Photo coming soon</span></div></div>
+          <div class="wall-photo"><img class="w-photo" src="assets/img/wall/learner-graduate-9.jpg" alt="Mashudu Driving School graduate" decoding="async" loading="lazy"><div class="placeholder"></div></div>
           <figcaption class="wall-cap">Confident &amp; certified</figcaption>
         </figure>
         <figure class="wall-tile">
-          <div class="wall-photo"><img class="w-photo" src="assets/img/wall/learner-graduate-10.jpg" alt="Mashudu Driving School graduate" loading="lazy"><div class="placeholder"><div class="mark">✓</div><span>Photo coming soon</span></div></div>
+          <div class="wall-photo"><img class="w-photo" src="assets/img/wall/learner-graduate-10.jpg" alt="Mashudu Driving School graduate" decoding="async" loading="lazy"><div class="placeholder"></div></div>
           <figcaption class="wall-cap">Licence in hand</figcaption>
         </figure>
         <figure class="wall-tile">
-          <div class="wall-photo"><img class="w-photo" src="assets/img/wall/learner-graduate-11.jpg" alt="Mashudu Driving School graduate" loading="lazy"><div class="placeholder"><div class="mark">✓</div><span>Photo coming soon</span></div></div>
+          <div class="wall-photo"><img class="w-photo" src="assets/img/wall/learner-graduate-11.jpg" alt="Mashudu Driving School graduate" decoding="async" loading="lazy"><div class="placeholder"></div></div>
           <figcaption class="wall-cap">K53 success</figcaption>
         </figure>
         <figure class="wall-tile">
-          <div class="wall-photo"><img class="w-photo" src="assets/img/wall/learner-graduate-12.jpg" alt="Mashudu Driving School graduate" loading="lazy"><div class="placeholder"><div class="mark">✓</div><span>Photo coming soon</span></div></div>
+          <div class="wall-photo"><img class="w-photo" src="assets/img/wall/learner-graduate-12.jpg" alt="Mashudu Driving School graduate" decoding="async" loading="lazy"><div class="placeholder"></div></div>
           <figcaption class="wall-cap">Driving with confidence</figcaption>
         </figure>
       </div>
@@ -571,7 +567,7 @@
   // Only a genuinely missing/broken photo needs JS: hide it so the
   // placeholder underneath shows through cleanly.
   document.querySelectorAll('.w-photo').forEach(function(img){
-    img.addEventListener('error', function(){ img.style.display = 'none'; });
+    img.addEventListener('error', function(){ var t = img.closest('.wall-tile'); if (t) t.style.display = 'none'; });
   });
 </script>
 
